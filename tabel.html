@@ -6,89 +6,117 @@
   <title>Tugas Tabel</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
-
-<style>
-  body{
-    background-color: rgb(44, 44, 44);
-    font-family: Arial, sans-serif;
-  }
-
-  h2{
-    color: white;
-    text-align: center;
-  }
-  .table-container{
-    width: 80%;
-    background-color: aliceblue;
-    border: 1px solid beige;
-    border-radius: 10px;
-    overflow: hidden  ;
-    text-align: center;
-    margin: 0 auto;
-  }
-  table{
-    align-content: center;
-    border: 1px solid beige;
-    border-collapse: collapse;
-    background-color: rgb(61,61,61);
-    color: beige;
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  tr,td{
-    border: 1px solid beige;
-    padding: 10px;
-    padding-right: 50px;
-    padding-left: 50px;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  th{
-    border: 1px solid beige;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  
-  tr:nth-child(even){
-    background-color: rgb(84,84,84);
-  }
-
-  tr:nth-child(1){
-    background-color: black;
-  }
-</style>
-
-<body>
-  <h2>Tabel Perkuliahan</h2>
-  <div class="table-container">  
-    <table>
-      <tr>
-        <th>NIM</th>
-        <th>Kelas</th>
-        <th>Mata Kuliah</th>
-        <th>Ruang</th>
-        <th>Dosen</th>
-        <th>Waktu Kuliah</th>
-      </tr>
-      <tr>
-        <td>23090043</td><td>3C</td>
-        <td>Enterprise Resource Planning</td>
-        <td>D4.7</td>
-        <td>Dyah Apriliani</td>
-        <td>08.50-10.30</td>
-      </tr>
-      <tr>
-        <td>123456</td>
-        <td>123456</td>
-        <td>123456</td>
-        <td>123456</td>
-        <td>123456</td>
-        <td>123456</td>
-      </tr>
-    </table>
-  </div>
-</body>
+  <style>
+    h2:nth-child(1){
+      color: white;
+      text-align: center;
+    }
+    tr,td{
+      border: 1px solid beige;
+      padding: 10px;
+      overflow: hidden;
+    }
+    th{
+      border: 1px solid beige;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    tr:nth-child(even){
+      background-color: rgb(84,84,84);
+    }
+    tr:nth-child(1){
+      background-color: black;
+    }
+  </style>
+  <body style="margin: 0%; background-color: rgb(44, 44, 44); font-family: Arial, sans-serif;">
+      <h2>Tabel Perkuliahan</h2>
+    <div style="width: 100%; overflow: hidden; text-align: center; margin: 0 auto;">  
+      <table style="width: 100%; border: 1px solid beige;  border-collapse: collapse; background-color: rgb(61,61,61); color: beige;">
+        <tr><th>NIM</th><th>Kelas</th><th>Mata Kuliah</th><th>Ruang</th><th>Dosen</th><th>Waktu Kuliah</th></tr>
+        <tr><td>23090043</td><td rowspan="15">3C</td><td rowspan="2">Enterprise Resource Planning</td><td rowspan="2">D4.7</td><td  rowspan="2">Dyah Apriliani, S.T., M.Kom</td><td rowspan="2">08.50-10.30</td></tr>
+        <tr><td>23090002</td></tr>
+        <tr><td>23090027</td><td rowspan="2">Pemrograman Komputer</td><td rowspan="2">Lab. D1</td><td rowspan="2">M. Nishom, M.Kom</td><td rowspan="2">13.50-16.20</td></tr>
+        <tr><td>23090028</td>
+        <tr><td>23090003</td><td>Matematika Numerik</td><td>D4.3</td><td>Aji Bagus Setiawan, S.Tr.Kom</td><td>16.20-18.00</td></tr>
+        <tr><td>23090006</td><td>Sistem Basis Data</td><td>D4.3</td><td>Taufiq Abidin, M.Kom</td><td>08.00-10.30</td></tr>
+        <tr><td>23090033</td><td>Statistika</td><td>Lab. D1</td><td>Aulia Rizqisyarifa, S.Tr.Kom</td><td>10.30-13.00</td></tr>
+        <tr><td>23090032</td><td rowspan="2">Jaringan Komputer</td><td rowspan="2">D4.5</td><td rowspan="2">Dega Surono Wibowo, S.T., M.Kom.</td><td rowspan="2">08.00-10.30</td></tr>
+        <tr><td>23090061</td>
+        <tr><td>23090022</td><td>Desain Grafis dan Multimedia</td><td>Lab. D1</td><td>Muhamad Sahrul Syabani, S.Tr.Kom</td><td>10.30-13.00</td></tr>
+        <tr><td>23090024</td><td>Pemrograman Web</td><td>Lab. D1</td><td>Sharfina Febbi Handayani, M.Kom</td><td>13.00-14.30</td></tr>
+        <tr><td>23090041</td><td rowspan="4">Pemrograman Web</td><td rowspan="4">Lab. D1</td><td rowspan="4">Sharfina Febbi Handayani, M.Kom</td><td rowspan="4">13.50-16.20</td></tr>
+        <tr><td>23090011</td>
+        <tr><td>23090009</td>
+        <tr><td>23090045</td>
+      </table>
+      <form action="tabel.html">
+        <br><br><h3 style="color: white; text-align: left; margin-left: 20px;">Tambah Mata Kuliah Prodi Teknik Informatika</h3>
+        <div style="display: grid; width: 20%; margin-left: 20px; margin-top: -10px; font-size: x-small;">
+          <label for="nim" style="color: white; text-align: left;">NIM</label>
+          <br><input type="text" id="nim" required style="margin-top: -10px;">
+          <br><label for="mata-kuliah" style="text-align: left ;margin-top: -5px; color: white;">Mata Kuliah</label>
+          <br><input type="text" id="mata-kuliah" style="margin-top: -10px;">
+          <div style="text-align: left; margin-top: -5px;">  
+          <br><label for="jenis-kelamin" style="color: white; margin-bottom: 10px;">Jenis Kelamin: </label>
+          <input type="radio" id="html" name="jenis-kelamin" value="HTML">
+          <label for="L" style="color: white;">Laki-Laki</label>
+          <input type="radio" id="css" name="jenis-kelamin" value="CSS">
+          <label for="P" style="color: white;">Perempuan</label><br>
+        </div>  
+          <label for="mata-kuliah" style="color: white;  text-align: left; margin-top: 10px;">Mata Kuliah</label>
+          <select id="mata-kuliah">
+            <option value="ERP">Enterprise Resource Planning</option>
+            <option value="pemkom">Pemrograman Komputer</option>
+            <option value="matnum">Matematika Numerik</option>
+            <option value="SBD">Sistem Basis Data</option>
+            <option value="stat">Statistika</option>
+            <option value="jarkom">Jaringan Komputer</option>
+            <option value="DGM">Desain Grafis dan Multimedia</option>
+            <option value="pemweb">Pemrograman Web</option>
+          </select>
+          <h4 style="color: white;">Ruangan</h4>
+          <div style="text-align: left; color: white;"><input type="checkbox" name="Ruang" id="Ruang" name="Ruang">
+          <label for="Ruang">D4.3</label>
+          <input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang">D4.4</label>
+          <input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang">D4.5</label>
+          <input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang">D4.7</label></div>
+          <div style="text-align: left;"><input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang" style="color: white;">Lab. Kom 1</label>
+          <input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang" style="color: white;">Lab. Kom 2</label>
+          <input type="checkbox" name="kelas" id="kelas" name="kelas">
+          <label for="Ruang" style="color: white;">Lab. RnD</label></div>
+          <h4 style="color: white;">Kelas</h4>
+          <div style="color: white;"><label for="kelas">3A</label>
+          <input type="checkbox" name="kelas" id="kelas">
+          <label for="kelas">3</label>
+          <input type="checkbox" name="kelas" id="kelas">
+          <label for="kelas">3C</label>
+          <input type="checkbox" name="kelas" id="kelas">
+          <label for="kelas">3D</label>
+          <input type="checkbox" name="kelas" id="kelas">
+          <label for="kelas">3E</label>
+          <input type="checkbox" name="kelas" id="kelas">
+          </div>
+          <br><label for="dosen" style="color: white;">Dosen:</label>
+          <input type="text">
+          <br><input type="submit" value="Submit">
+          <label for="Waktu" style="color: white;  text-align: left; margin-top: 10px;">Waktu</label>
+          <select id="Waktu">
+            <option value="1">08.00-08.50</option>
+            <option value="2">Pemrograman Komputer</option>
+            <option value="3">Matematika Numerik</option>
+            <option value="4">Sistem Basis Data</option>
+            <option value="5">Statistika</option>
+            <option value="6">Jaringan Komputer</option>
+            <option value="7">Desain Grafis dan Multimedia</option>
+            <option value="8">Pemrograman Web</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
