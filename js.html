@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Membuat JavaScript</h1>
+    <p>Sample</p>
+    <p id="demo"></p><br>
+    <p id="demo2" style="font-weight: bold; font-size: xx-large;"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p> JavaScript DOM Validation</p>
+    <p> Masukkan Bilangan 1-10</p>
+    <input id="demo5">
+    <button type="button" onclick="cekBilangan()">Submit</button>
+    <p id="demo6"></p>
+
+    <h1 id="DOM CSS">DOM CSS</h1>
+    <!-- inline JavaScript -->
+    <button onclick="document.getElementById('DOM CSS').style.color='red'">Klik Untuk Merubah Warna</button>
+
+    <script>
+        let x, y, z;  // Statement 1
+        x = 5;        // Statement 2
+        y = 6;        // Statement 3
+        z = x + y;    // Statement 4
+
+        document.getElementById("demo").innerHTML = "Jumlah z =" + z + ".";
+
+        function myFunc(p1, p2){
+            return p1 * p2;
+        }
+        let result = myFunc(2,3);
+        document.getElementById("demo2").innerHTML = "Demo Function JS<br>" + result;
+
+        const mataKuliah = [];
+        mataKuliah[0] = "Pemrograman Komputer";
+        mataKuliah[1] = "Jaringan Komputer";
+        mataKuliah[2] = "Pemrograman Web";
+        mataKuliah[3] = "Statistika";
+        mataKuliah[4] = "Desain Grafis";
+        mataKuliah[5] = "Enterprise Resource System";
+        mataKuliah[6] = "Matematika Numerik";
+        // document.getElementById("demo3").innerHTML = mataKuliah.join("<br>");
+        let list = "";
+        mataKuliah.forEach((item, index) => {
+            list += (index + 1) + ". " + item + "<br>";
+        });
+
+        document.getElementById("demo3").innerHTML = list;
+
+        function cekNilai(skor){
+            let hasil = "";
+
+            if(skor >= 80 && skor <= 100){
+                hasil = "A";
+            } else if(skor >=70 && skor <= 79){
+                hasil = "B";
+            } else if(skor >= 60 && skor <= 69){
+                hasil = "C";
+            } else if(skor >= 50 && skor <= 59){
+                hasil = "D"
+            } else if(skor <= 49){
+                hasil = "E";
+            } else{
+                hasil = "Nilai Tidak Ditemukan"
+            }
+            return hasil;
+        }
+
+        let nilaiA = 85;
+        let nilaiB = 74;
+        let nilaiC = 65;
+
+        document.getElementById("demo4").innerHTML = "Hasil Nilai = " + cekNilai(nilaiA)
+
+        function cekBilangan(){
+            let bilangan = document.getElementById("demo5").value;
+            let text;
+            if (isNaN(bilangan) || bilangan < 1 || bilangan > 10){
+                text = "Bilangan tidak valid";
+            } else{
+                text = "Bilangan valid";
+            }
+            document.getElementById("demo6").innerHTML = text;
+        }
+
+
+    </script>
+</body>
+</html>
